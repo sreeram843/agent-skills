@@ -31,6 +31,7 @@ Installed 2026-08-17 from public repos, curated for quality/maintenance/breadth 
 | investigate-first, lean-build, safe-refactor, surgical-patch, verify-and-stop | [juliusbrussee/caveman](https://github.com/juliusbrussee/caveman) (cherry-picked; skipped the caveman-speak persona skills and bundled binaries) |
 | tdd-workflow, security-review, verification-loop, mcp-server-patterns | [affaan-m/ECC](https://github.com/affaan-m/ECC) (cherry-picked from ~350 skills; used the canonical `skills/` copies, not the `.kiro/`/`.cursor/`/`.agents/`/translated mirrors) |
 | adhd | [uditakhourii/adhd](https://github.com/uditakhourii/adhd) — divergent-ideation skill for brainstorming/design decisions, not for routine bugs |
+| task-observer | [rebelytics/one-skill-to-rule-them-all](https://github.com/rebelytics/one-skill-to-rule-them-all) — meta-skill that watches sessions and logs skill-improvement suggestions for review; doesn't modify skills automatically |
 
 **Known naming collisions with Claude Code's built-in skills:** `code-review` (mattpocock/skills — two-axis Standards-vs-Spec review) and `security-review` (affaan-m/ECC) both share names with built-in Claude Code plugin skills. They are different implementations — if Claude picks the wrong one or behavior seems off, that's why. Rename or remove one if it causes confusion.
 
