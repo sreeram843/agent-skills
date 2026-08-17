@@ -116,7 +116,7 @@ Congratulations! You now have your own agent skills monorepo and you're ready to
 
 `agents/` is the canonical user-skill folder. `claude/` is a required mirror because Claude Code reads from `~/.claude/skills` rather than `~/.agents/skills`. The `codex/` folder is reserved for Codex system-skill content (e.g. `.system/`); put Codex user skills in `agents/` instead.
 
-By convention, when you ask an agent to add a new skill, it should ask whether to install into `agents/`, `claude/`, or both. You can pin a default by editing `AGENTS.md`.
+By current preference, new user skills are mirrored into `agents/`, `claude/`, `copilot/`, `cursor/`, and `gemini/`. The `codex/` folder remains reserved for Codex system-skill content.
 
 ### What Setup Does
 

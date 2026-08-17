@@ -6,19 +6,19 @@
 - `agents/` is the canonical user-skill folder and maps to `~/.agents/skills`.
 - `claude/` is a required mirror of `agents/` and maps to `~/.claude/skills`. Claude Code does not read `~/.agents/skills`, so skills you want Claude to use must also live here.
 - `codex/`, `copilot/`, `cursor/`, `gemini/` are optional per-agent folders. Users opt into these during setup.
-- The repo is intentionally blank in the top-level agent folders. The template ships one project-local skill, `agent-skills-setup-manager`, under `.agents/skills/` and `.claude/skills/`, which manages this repo itself.
+- The project-local `agent-skills-setup-manager` skill lives under `.agents/skills/` and `.claude/skills/` and manages this repo itself.
 
 ## Source-of-truth Rules
 
 - New skills go into `agents/` first.
 - By default a new skill should also be installed into `claude/` so Claude Code can use it.
-- **User preference (set 2026-08-17): always install new skills into both `agents/` and `claude/` without asking.** Do not re-prompt for this choice.
-- Avoid putting user skills into `codex/`, `copilot/`, `cursor/`, or `gemini/` unless the user explicitly says so. Those folders are for agents whose system directory layout is separate from `~/.agents/skills`.
-- `opencode` needs no dedicated folder — it reads `~/.agents/skills` and `~/.claude/skills` directly per the open Agent Skills / SKILL.md standard, so anything installed into `agents/`+`claude/` already covers it.
+- **User preference (set 2026-08-17): always install new user skills into `agents/`, `claude/`, `copilot/`, `cursor/`, and `gemini/` without asking.** Do not re-prompt for this choice.
+- Keep `codex/` reserved for Codex system-skill content; Codex user skills belong in `agents/`.
+- `opencode` needs no dedicated folder — it reads `~/.agents/skills` and `~/.claude/skills` directly per the open Agent Skills / SKILL.md standard, so anything installed into the user-skill mirrors already covers it.
 
 ## Installed Third-Party Skills (provenance)
 
-Installed 2026-08-17 from public repos, curated for quality/maintenance/breadth (not by star count — several source repos show star counts inconsistent with their age, a known bot-star pattern; curation here was by content review). Update by re-pulling from source and re-copying into both `agents/` and `claude/`.
+Installed 2026-08-17 from public repos, curated for quality/maintenance/breadth (not by star count — several source repos show star counts inconsistent with their age, a known bot-star pattern; curation here was by content review). Update by re-pulling from source and re-copying into all user-skill mirrors: `agents/`, `claude/`, `copilot/`, `cursor/`, and `gemini/`.
 
 | Skills | Source |
 | --- | --- |
